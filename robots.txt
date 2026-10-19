@@ -1,0 +1,7 @@
+# Se permite rastrear todo. (Ojo: Google solo lee el robots.txt de la RAIZ del dominio,
+# https://aminacomunicaciones-a11y.github.io/robots.txt, que tambien permite todo.
+# Este queda por si la web pasa a dominio propio. El sitemap se envia en Search Console.)
+User-agent: *
+Allow: /
+
+Sitemap: https://aminacomunicaciones-a11y.github.io/impacto-lab/sitemap.xml
