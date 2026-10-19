@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap">
-<link rel="preload" as="image" href="img/logo-titulo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/logo-impacto-lab.webp" fetchpriority="high">
 
 <script type="application/ld+json">
 {
@@ -156,7 +156,7 @@ ul.list li{margin:4px 0}
 .gallery button:hover img{transform:scale(1.04)}
 .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 8px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:14px;text-align:left;color:#fff}
 .gallery .wide{grid-column:1/-1;aspect-ratio:auto;cursor:default;background:var(--panel);display:flex;align-items:center;justify-content:center;padding:20px}
-.gallery .wide img{width:min(660px,100%);height:auto;object-fit:contain}
+.gallery .wide{padding:0;overflow:hidden}.gallery .wide img{width:100%;height:auto;object-fit:contain}
 @media (max-width:640px){.gallery{grid-template-columns:repeat(2,1fr);gap:8px}}
 dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,560px);max-height:92vh}
 dialog.lb::backdrop{background:rgba(0,0,0,.88)}
@@ -211,7 +211,7 @@ footer a{color:var(--muted)}
 <div class="hero">
   <div class="wrap">
     <div>
-      <img class="logo" src="img/logo-titulo.webp" width="660" height="260" alt="Impacto Lab" fetchpriority="high">
+      <img class="logo" src="img/logo-impacto-lab.webp" width="660" height="260" alt="Impacto Lab" fetchpriority="high">
       <h1>Impacto Lab: juego de acción y supervivencia gore para Android</h1>
       <p class="lead">Aguanta oleadas sin fin, gana dinero con cada baja y conviértelo en armas cada vez más bestias. De la calle a la Luna y al infierno, con física de verdad: cada golpe corta, quema, congela o revienta.</p>
       <div class="badges">
@@ -287,7 +287,7 @@ footer a{color:var(--muted)}
     <h2>Galería</h2>
     <p class="sub">Capturas reales del juego en un móvil Android. Toca una para verla en grande.</p>
     <div class="gallery">
-      <figure class="wide" style="margin:0"><img src="img/logo-titulo.webp" width="660" height="260" alt="Gráfico de Impacto Lab: el logotipo de la diana agrietada en amarillo y negro y el título en letras de plantilla." loading="lazy"></figure>
+      <figure class="wide" style="margin:0"><img src="img/og-impacto-lab.jpg" width="1200" height="630" alt="Gráfico destacado de Impacto Lab: el logotipo de la diana agrietada en amarillo y negro, el lema «Acción y supervivencia gore» y una captura del juego." loading="lazy"></figure>
       <button type="button" data-full="img/oficinistas-960.webp"><img src="img/oficinistas-480.webp" width="480" height="600" loading="lazy" alt="El Vendaval, un caballero mecánico con dos espadas, avanza detrás de tres oficinistas hasta la barrera de la Policía Local."><figcaption>El Vendaval y sus oficinistas</figcaption></button>
       <button type="button" data-full="img/sala-fuego-960.webp"><img src="img/sala-fuego-480.webp" width="480" height="600" loading="lazy" alt="Un oficinista envuelto en llamas en la sala de ensayo."><figcaption>Fuego en la sala de ensayo</figcaption></button>
       <button type="button" data-full="img/calle-helada-960.webp"><img src="img/calle-helada-480.webp" width="480" height="600" loading="lazy" alt="Oficinistas congelados y salpicados de sangre en una calle bajo la lluvia, junto al lanzadiscos."><figcaption>Calle helada</figcaption></button>
