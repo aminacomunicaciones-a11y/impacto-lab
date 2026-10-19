@@ -152,7 +152,7 @@ ul.list li{margin:4px 0}
 /* galería */
 .gallery{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
 .gallery button{padding:0;border:0;background:#000;border-radius:12px;overflow:hidden;cursor:zoom-in;position:relative;aspect-ratio:4/5}
-.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gallery img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform .3s}
 .gallery button:hover img{transform:scale(1.04)}
 .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 8px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:14px;text-align:left;color:#fff}
 .gallery .wide{grid-column:1/-1;aspect-ratio:auto;cursor:default;background:var(--panel);display:flex;align-items:center;justify-content:center;padding:20px}
@@ -288,12 +288,14 @@ footer a{color:var(--muted)}
     <p class="sub">Capturas reales del juego en un móvil Android. Toca una para verla en grande.</p>
     <div class="gallery">
       <figure class="wide" style="margin:0"><img src="img/og-impacto-lab.jpg" width="1200" height="630" alt="Gráfico destacado de Impacto Lab: el logotipo de la diana agrietada en amarillo y negro, el lema «Acción y supervivencia gore» y una captura del juego." loading="lazy"></figure>
+      <!-- CAPTURAS:INICIO (lo genera herramientas/meter-capturas.py; no editar a mano) -->
       <button type="button" data-full="img/oficinistas-960.webp"><img src="img/oficinistas-480.webp" width="480" height="600" loading="lazy" alt="El Vendaval, un caballero mecánico con dos espadas, avanza detrás de tres oficinistas hasta la barrera de la Policía Local."><figcaption>El Vendaval y sus oficinistas</figcaption></button>
       <button type="button" data-full="img/sala-fuego-960.webp"><img src="img/sala-fuego-480.webp" width="480" height="600" loading="lazy" alt="Un oficinista envuelto en llamas en la sala de ensayo."><figcaption>Fuego en la sala de ensayo</figcaption></button>
       <button type="button" data-full="img/calle-helada-960.webp"><img src="img/calle-helada-480.webp" width="480" height="600" loading="lazy" alt="Oficinistas congelados y salpicados de sangre en una calle bajo la lluvia, junto al lanzadiscos."><figcaption>Calle helada</figcaption></button>
       <button type="button" data-full="img/metralla-960.webp"><img src="img/metralla-480.webp" width="480" height="600" loading="lazy" alt="Un zombi de pruebas recibe el impacto de metralla en la sala de ensayo."><figcaption>Disco de metralla</figcaption></button>
       <button type="button" data-full="img/los-cinco-960.webp"><img src="img/los-cinco-480.webp" width="480" height="600" loading="lazy" alt="Un disco de sierra atraviesa a un oficinista en la sala de ensayo, entre salpicaduras de sangre."><figcaption>Los cinco</figcaption></button>
       <button type="button" data-full="img/vendaval-960.webp"><img src="img/vendaval-480.webp" width="480" height="600" loading="lazy" alt="Primer plano de El Vendaval, el jefe con armadura y capa roja, con oficinistas en el suelo."><figcaption>Jefe: El Vendaval</figcaption></button>
+      <!-- CAPTURAS:FIN -->
     </div>
   </div>
 </section>

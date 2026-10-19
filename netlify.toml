@@ -1,0 +1,13 @@
+# Netlify: web estática, sin compilación. (GitHub Pages ignora este fichero.)
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/herramientas/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

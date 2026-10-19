@@ -14,7 +14,9 @@ Publicada con GitHub Pages en **https://aminacomunicaciones-a11y.github.io/impac
   Al añadirlos conviene meter también un `VideoObject` en el JSON-LD.
 - **Botón de Google Play**: cuando el juego esté publicado, cambiar los dos botones «Próximamente»
   por enlaces a la ficha y añadir `"offers"` al JSON-LD.
-- **Correo de contacto** en `privacidad/index.html` (lo exige Google Play).
-- Capturas nuevas sin textos de la Constitución (las de `tienda/` del kit aún los tienen).
+- **Capturas nuevas (v62, sin Constitución)**: `python herramientas/meter-capturas.py C:/Users/fauss/Desktop/impacto-capturas`
+  (pies y alt opcionales en un `textos.json` dentro de esa carpeta; ver el propio script).
+- **Cambio de hosting** (Netlify o dominio propio): `python herramientas/cambiar-url.py https://NUEVA-URL/`
+  y volver a enviar el sitemap en Search Console con la URL nueva.
 
 No subir aquí nunca la carpeta `firma/` ni la APK.
