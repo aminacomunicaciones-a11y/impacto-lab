@@ -64,7 +64,7 @@ def main(origen):
 
     p = WEB / 'sitemap.xml'
     s = p.read_text(encoding='utf-8')
-    imgs = ''.join(f'\n    <image:image><image:loc>{u}</image:loc></image:image>' for u in [f'{BASE}img/og-impacto-lab.jpg'] + grandes)
+    imgs = ''.join(f'\n    <image:image><image:loc>{u}</image:loc></image:image>' for u in [f'{BASE}img/og-impacto-lab-v2.jpg'] + grandes)
     s = re.sub(r'(<loc>' + re.escape(BASE) + r'</loc>\n    <lastmod>[^<]*</lastmod>)(\s*<image:image>.*?</image:image>)*',
                lambda m: m.group(1) + imgs, s, count=1, flags=re.S)
     p.write_text(s, encoding='utf-8')

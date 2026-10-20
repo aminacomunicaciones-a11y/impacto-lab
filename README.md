@@ -1,6 +1,6 @@
 # Impacto Lab · web pública
 
-Web del juego **Impacto Lab** (acción y supervivencia gore para Android, PEGI 18).
+Web del juego **Impacto Lab** (acción y supervivencia por oleadas para Android, PEGI 18, con anuncios AdMob).
 Publicada con GitHub Pages en **https://aminacomunicaciones-a11y.github.io/impacto-lab/**
 
 - `index.html` — portada (hero, modos, arsenal, galería, vídeos, descarga, preguntas).
