@@ -162,10 +162,10 @@ body.shake #hero .hero-in{animation:shake .35s linear}
 .sec .note{font:500 12.5px/1.55 var(--mono);color:var(--mute);text-wrap:pretty}
 .sec .note b{color:var(--paper);font-weight:600}
 html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .9s var(--ease)}
-.rv.in{opacity:1;transform:none}
+.rv.in,html.js .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
 html.js .wipe{clip-path:inset(0 100% 0 0);transition:clip-path 1s var(--ease)}
-.wipe.in{clip-path:inset(0 0 0 0)}
+.wipe.in,html.js .wipe.in{clip-path:inset(0 0 0 0)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font:600 11px/1 var(--mono);letter-spacing:.04em;padding:7px 9px;border-radius:5px;background:var(--plate);color:var(--paper);border:1px solid var(--rule)}
 .chip.y{background:var(--safety);color:var(--asphalt);border-color:var(--safety)}
