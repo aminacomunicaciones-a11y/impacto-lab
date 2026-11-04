@@ -383,3 +383,18 @@ html.quieto #hud,html.quieto #dock{transform:none}
   #hero .vid video,#hero .vid img{opacity:1;transform:none}
   #boot{display:none}
 }
+
+/* ---------- idiomas ---------- */
+.langs{position:absolute;top:calc(92px + env(safe-area-inset-top,0px));right:var(--gutter);z-index:5;display:flex;gap:4px;padding:4px;border:1px solid var(--rule);border-radius:8px;background:rgba(16,19,23,.72);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.langs a{display:grid;place-items:center;min-width:40px;min-height:34px;padding:0 8px;border-radius:5px;font:600 11px/1 var(--mono);letter-spacing:.12em;color:var(--paper);text-decoration:none}
+.langs a[aria-current="page"]{background:var(--safety);color:var(--asphalt)}
+footer .langs-f{display:flex;flex-wrap:wrap;gap:6px 16px}
+/* ---------- lista de espera ---------- */
+.lista{max-width:560px;border:1px solid var(--rule);border-left:4px solid var(--safety);border-radius:8px;background:var(--bay);padding:16px 16px 14px;display:grid;gap:10px}
+.lista h3{margin:0;font:800 clamp(24px,6vw,32px)/1 var(--display);letter-spacing:.03em;text-transform:uppercase;color:var(--paper)}
+.lista p{margin:0;font:500 14px/1.5 var(--mono);color:var(--paper);text-wrap:pretty}
+.lista .cta{justify-self:start;cursor:pointer}
+.lista .cta svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lista .cta.off{background:var(--plate);color:var(--mute);box-shadow:none;cursor:default}
+.lista small{font:600 10.5px/1.5 var(--mono);letter-spacing:.06em;color:var(--mute)}
+.lista small a{color:var(--paper)}

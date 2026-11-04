@@ -19,6 +19,14 @@
   var autoplayOK = !reduce && !saveData;
   var $ = function (s, c) { return (c || d).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || d).querySelectorAll(s)); };
+  /* textos de este script en cada idioma (el idioma lo marca <html lang>) */
+  var LG = (root.lang || 'es').slice(0, 2);
+  var TXS = {
+    es: { boot: ['Preparando la sala de ensayo…', 'Calibrando la barrera…', 'Contando oficinistas…', 'Abriendo la alcantarilla…'], clip: 'Ver clip', play: 'Reproducir: ', clip2: 'clip', on: 'Sonido: sí', off: 'Sonido: no' },
+    en: { boot: ['Setting up the test room…', 'Calibrating the barrier…', 'Counting office workers…', 'Opening the manhole…'], clip: 'Watch clip', play: 'Play: ', clip2: 'clip', on: 'Sound: on', off: 'Sound: off' },
+    pt: { boot: ['Preparando a sala de testes…', 'Calibrando a barreira…', 'Contando funcionários…', 'Abrindo o bueiro…'], clip: 'Ver clipe', play: 'Reproduzir: ', clip2: 'clipe', on: 'Som: sim', off: 'Som: não' }
+  };
+  var TX = TXS[LG] || TXS.es;
 
   /* ---------- arranque ---------- */
   var boot = $('#boot'), body = d.body;
@@ -49,7 +57,7 @@
     root.classList.add('no-boot');
     if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', start); else start();
   } else {
-    var msgs = ['Preparando la sala de ensayo…', 'Calibrando la barrera…', 'Contando oficinistas…', 'Abriendo la alcantarilla…'];
+    var msgs = TX.boot;
     var m = $('#bootMsg'), k = 0;
     requestAnimationFrame(function () { boot.classList.add('run'); });
     var iv = setInterval(function () { k++; if (m && msgs[k]) m.textContent = msgs[k]; }, 380);
@@ -97,8 +105,8 @@
   }
   function playBtn(box) {
     var b = d.createElement('button'); b.className = 'play'; b.type = 'button';
-    b.innerHTML = '<b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></b><span>' + (box.dataset.label || 'Ver clip') + '</span>';
-    b.setAttribute('aria-label', 'Reproducir: ' + (box.dataset.label || 'clip'));
+    b.innerHTML = '<b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></b><span>' + (box.dataset.label || TX.clip) + '</span>';
+    b.setAttribute('aria-label', TX.play + (box.dataset.label || TX.clip2));
     b.addEventListener('click', function () {
       var v = build(box);
       if (box.dataset.controls === '1') { v.muted = false; }
@@ -131,7 +139,7 @@
   function applySound() {
     $$('.vid[data-sound="1"] video').forEach(function (v) { v.muted = !soundOn; });
     snd.setAttribute('aria-pressed', soundOn ? 'true' : 'false');
-    $('#sndTxt').textContent = soundOn ? 'Sonido: sí' : 'Sonido: no';
+    $('#sndTxt').textContent = soundOn ? TX.on : TX.off;
   }
   if (snd) snd.addEventListener('click', function () {
     soundOn = !soundOn;
@@ -201,6 +209,14 @@
       t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce ? 'auto' : 'smooth' });
     });
   });
+
+  /* ---------- lista de espera: la dirección del formulario está en js/lista.js ---------- */
+  var WL = (typeof w.WAITLIST_URL === 'string' && /^https:\/\//.test(w.WAITLIST_URL)) ? w.WAITLIST_URL : '';
+  $$('[data-waitlist]').forEach(function (a) {
+    if (WL) { a.href = WL; a.removeAttribute('aria-disabled'); a.classList.remove('off'); }
+    else { a.removeAttribute('href'); a.setAttribute('aria-disabled', 'true'); a.classList.add('off'); }
+  });
+  $$('[data-waitlist-off]').forEach(function (e) { e.hidden = !!WL; });
 
   /* ---------- contador de la portada ---------- */
   var cnt = $('#roArms');
