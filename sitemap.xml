@@ -34,6 +34,66 @@
     <image:image><image:loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/img/og.jpg</image:loc><image:title>Impacto Lab</image:title></image:image>
   </url>
   <url>
+    <loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/tester/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/tester/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/tester/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/tester/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/tester/"/>
+  </url>
+  <url>
+    <loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/en/tester/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/tester/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/tester/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/tester/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/tester/"/>
+  </url>
+  <url>
+    <loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/tester/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/tester/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/tester/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/tester/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/tester/"/>
+  </url>
+  <url>
+    <loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/presskit/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/presskit/"/>
+  </url>
+  <url>
+    <loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/en/presskit/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/presskit/"/>
+  </url>
+  <url>
+    <loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/presskit/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/pt/presskit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aminacomunicaciones-a11y.github.io/impacto-lab/en/presskit/"/>
+  </url>
+  <url>
     <loc>https://aminacomunicaciones-a11y.github.io/impacto-lab/privacidad/</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>yearly</changefreq>
