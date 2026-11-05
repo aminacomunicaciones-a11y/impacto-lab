@@ -60,8 +60,9 @@
     var msgs = TX.boot;
     var m = $('#bootMsg'), k = 0;
     requestAnimationFrame(function () { boot.classList.add('run'); });
-    var iv = setInterval(function () { k++; if (m && msgs[k]) m.textContent = msgs[k]; }, 380);
-    setTimeout(function () { clearInterval(iv); start(); }, 1650);
+    var iv = setInterval(function () { k++; if (m && msgs[k]) m.textContent = msgs[k]; }, 230);
+    // la pantalla de arranque dura menos de un segundo: antes eran 1,65 s y retrasaba que se viera la portada
+    setTimeout(function () { clearInterval(iv); start(); }, 950);
     $('#bootSkip').addEventListener('click', function () { clearInterval(iv); start(); });
   }
 
@@ -129,10 +130,25 @@
       }
     });
   }, { rootMargin: '200px 0px' }) : null;
+  // El vídeo de la portada (4,4 MB) no se pide al entrar: primero se ve su fotograma y el vídeo arranca al primer gesto
+  // (tocar, deslizar, rueda, tecla) o a los 6 s de cargar la página. Así la portada se pinta antes en móviles flojos.
+  var heroWait = [];
+  function heroGo() {
+    if (!heroWait) return;
+    var q = heroWait; heroWait = null;
+    ['pointerdown', 'touchstart', 'keydown', 'wheel'].forEach(function (ev) { w.removeEventListener(ev, heroGo, true); });
+    q.forEach(function (box) { io.observe(box); });
+  }
   vids.forEach(function (box) {
     if (box.dataset.controls === '1' || !autoplayOK || !io) { playBtn(box); return; }
+    if (box.closest('#hero')) { heroWait.push(box); return; }
     io.observe(box);
   });
+  if (heroWait.length) {
+    ['pointerdown', 'touchstart', 'keydown', 'wheel'].forEach(function (ev) { w.addEventListener(ev, heroGo, { capture: true, passive: true }); });
+    var heroT = function () { setTimeout(heroGo, 6000); };
+    if (d.readyState === 'complete') heroT(); else w.addEventListener('load', heroT);
+  } else heroWait = null;
 
   /* ---------- sonido opcional (apagado por defecto) ---------- */
   var snd = $('#btnSound'), soundOn = false;
@@ -222,7 +238,8 @@
   var cnt = $('#roArms');
   if (cnt && !reduce) {
     var target = parseInt(cnt.dataset.n, 10) || 0, t0 = null;
-    function step(ts) { if (!t0) t0 = ts; var k = Math.min(1, (ts - t0) / 1400); k = 1 - Math.pow(1 - k, 3); cnt.textContent = Math.round(target * k); if (k < 1) requestAnimationFrame(step); }
-    setTimeout(function () { requestAnimationFrame(step); }, seen ? 300 : 2300);
+    // a saltos de 100 ms (no a cada fotograma): cada cambio de texto obliga a recolocar la página
+    function step() { if (!t0) t0 = Date.now(); var k = Math.min(1, (Date.now() - t0) / 1400); k = 1 - Math.pow(1 - k, 3); cnt.textContent = Math.round(target * k); if (k < 1) setTimeout(step, 100); }
+    setTimeout(step, seen ? 300 : 2300);
   }
 })();
