@@ -103,7 +103,7 @@ html.js #dock{transform:translateY(110%)}
 /* ---------- portada ---------- */
 #hero{position:relative;min-height:100vh;min-height:100svh;display:grid;align-items:end;isolation:isolate;overflow:hidden;background:#000}
 #hero .vid{position:absolute;inset:0;z-index:-1}
-html.js #hero .vid video,html.js #hero .vid img{opacity:0;transform:scale(1.08);transition:opacity 1.6s ease,transform 6s var(--ease)}
+html.js #hero .vid video,html.js #hero .vid img{opacity:0;transform:scale(1.08);transition:opacity .9s ease,transform 2.4s var(--ease)}
 body.go #hero .vid video,body.go #hero .vid img{opacity:1;transform:none}
 #hero .vid video.ready~img{opacity:0}
 #hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:
@@ -133,13 +133,13 @@ body.go #hero .vid video,body.go #hero .vid img{opacity:1;transform:none}
 
 /* entrada cinematográfica de la portada */
 html.js .hero-in>*{opacity:0;transform:translateY(18px)}
-body.go .hero-in>*{animation:rise .9s var(--ease) forwards}
+body.go .hero-in>*{animation:rise .7s var(--ease) forwards}
 body.go .hero-in>:nth-child(1){animation-delay:.1s}
 body.go .hero-in>:nth-child(2){animation:none;opacity:1;transform:none}
-body.go .hero-in>:nth-child(3){animation-delay:1.25s}
-body.go .hero-in>:nth-child(4){animation-delay:1.45s}
-body.go .hero-in>:nth-child(5){animation-delay:1.7s}
-body.go .hero-in>:nth-child(6){animation-delay:1.95s}
+body.go .hero-in>:nth-child(3){animation-delay:.7s}
+body.go .hero-in>:nth-child(4){animation-delay:.8s}
+body.go .hero-in>:nth-child(5){animation-delay:.9s}
+body.go .hero-in>:nth-child(6){animation-delay:1s}
 html.js #hero h1 span{opacity:0}
 body.go #hero h1 span{animation:stamp .55s var(--ease) forwards}
 @keyframes stamp{0%{opacity:0;transform:scale(1.7) translateY(-14px);filter:blur(8px)}55%{opacity:1;transform:scale(.97);filter:blur(0)}100%{opacity:1;transform:none}}
@@ -312,6 +312,10 @@ html.js .wipe{clip-path:inset(0 100% 0 0);transition:clip-path 1s var(--ease)}
 .tcard svg{width:22px;height:22px;fill:currentColor}
 .tcard b{font:800 20px/1 var(--display);letter-spacing:.04em}
 .tcard span{font:600 10px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.tiktok{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--rule);border-radius:8px;background:var(--bay);color:var(--paper);text-decoration:none;width:fit-content}
+.tiktok svg{width:22px;height:22px;fill:currentColor}
+.tiktok b{font:800 20px/1 var(--display);letter-spacing:.04em}
+.tiktok span{font:600 10px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 
 /* 09 · vídeos */
 .videos{display:grid;gap:14px}
