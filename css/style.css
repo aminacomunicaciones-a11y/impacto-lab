@@ -308,10 +308,10 @@ html.js .wipe{clip-path:inset(0 100% 0 0);transition:clip-path 1s var(--ease)}
 .llamada .ctas{margin:0}
 .llamada .big{font:800 clamp(30px,8vw,56px)/.95 var(--display);color:var(--paper);max-width:16ch}
 .llamada .big em{font-style:normal;color:var(--safety)}
-.tiktok{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--rule);border-radius:8px;background:var(--bay);color:var(--paper);text-decoration:none;width:fit-content}
-.tiktok svg{width:22px;height:22px;fill:currentColor}
-.tiktok b{font:800 20px/1 var(--display);letter-spacing:.04em}
-.tiktok span{font:600 10px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.tcard{display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--rule);border-radius:8px;background:var(--bay);color:var(--paper);text-decoration:none;width:fit-content}
+.tcard svg{width:22px;height:22px;fill:currentColor}
+.tcard b{font:800 20px/1 var(--display);letter-spacing:.04em}
+.tcard span{font:600 10px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 
 /* 09 · vídeos */
 .videos{display:grid;gap:14px}
