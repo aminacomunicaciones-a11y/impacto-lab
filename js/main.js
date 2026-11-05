@@ -50,8 +50,8 @@
         setTimeout(function () { body.classList.remove('shake'); }, 400);
       }, t);
     }
-    setTimeout(function () { $('#hud').classList.add('on'); }, reduce ? 0 : 2200);
-    setTimeout(function () { body.classList.add('settled'); }, reduce ? 0 : 3200);
+    setTimeout(function () { $('#hud').classList.add('on'); }, reduce ? 0 : 1400);
+    setTimeout(function () { body.classList.add('settled'); }, reduce ? 0 : 2200);
   }
   if (reduce || seen || !boot) {
     root.classList.add('no-boot');
@@ -240,6 +240,6 @@
     var target = parseInt(cnt.dataset.n, 10) || 0, t0 = null;
     // a saltos de 100 ms (no a cada fotograma): cada cambio de texto obliga a recolocar la página
     function step() { if (!t0) t0 = Date.now(); var k = Math.min(1, (Date.now() - t0) / 1400); k = 1 - Math.pow(1 - k, 3); cnt.textContent = Math.round(target * k); if (k < 1) setTimeout(step, 100); }
-    setTimeout(step, seen ? 300 : 2300);
+    setTimeout(step, seen ? 300 : 1500);
   }
 })();
