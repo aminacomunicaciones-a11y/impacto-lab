@@ -243,3 +243,27 @@
     setTimeout(step, seen ? 300 : 1500);
   }
 })();
+
+/* ---------- 10 · YouTube: fachada. Al cargar solo hay miniatura y botón; el iframe
+   (youtube-nocookie) se crea al pulsar, así no se pide nada a YouTube antes. ---------- */
+(function () {
+  'use strict';
+  var boxes = document.querySelectorAll('.yt[data-yt]');
+  Array.prototype.forEach.call(boxes, function (box) {
+    var btn = box.querySelector('.yt-play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var id = box.getAttribute('data-yt');
+      if (!/^[\w-]{11}$/.test(id)) return;
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&playsinline=1&rel=0';
+      f.title = (btn.getAttribute('aria-label') || 'YouTube').replace(/^[^:]*:\s*/, '');
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.setAttribute('allowfullscreen', '');
+      f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      box.innerHTML = '';
+      box.appendChild(f);
+      f.focus();
+    });
+  });
+})();
