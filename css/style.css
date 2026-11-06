@@ -404,3 +404,6 @@ footer .langs-f{display:flex;flex-wrap:wrap;gap:6px 16px}
 /* solo Android (5-nov-2026): que nadie con iPhone se apunte creyendo que podrá jugar */
 .fine strong,.lista .plat strong{color:var(--safety);font-weight:600}
 .lista .plat{color:var(--paper)}
+
+/* la portada no enseña el botón de reproducir mientras el vídeo de fondo espera (arranca solo al primer gesto o a los 6 s) */
+#hero .play{display:none}
